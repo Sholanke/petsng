@@ -9,7 +9,7 @@ export default function Header() {
           <div className="_left">
             <p className="logo">PetsNg</p>
             <div className="links">
-              <a href="#" className="link">
+              <a href="/" className="link">
                 Blog
               </a>
             </div>
