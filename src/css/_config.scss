@@ -1,0 +1,41 @@
+@import "./mixins";
+
+* {
+  font-family: "Muli";
+  background: transparent;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #011b33;
+  font-weight: 500;
+  box-sizing: border-box;
+  object-fit: cover;
+  border: none;
+  outline: none;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.faint {
+  color: #8794a0;
+}
+
+.button-default {
+  padding: 10px 20px;
+  background: #1a6df6;
+  color: #fff;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  font-size: 95%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}

@@ -1,0 +1,266 @@
+* {
+  font-family: "Muli";
+  background: transparent;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #011b33;
+  font-weight: 500;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+  outline: none;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.faint {
+  color: #8794a0;
+}
+
+.button-default {
+  padding: 10px 20px;
+  background: #1a6df6;
+  color: #fff;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  font-size: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.wrapper .max_width {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav {
+  border-bottom: 1px solid #00395f1a;
+}
+
+.nav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav nav ._left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav nav .logo {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.nav nav .links {
+  margin: 0 20px;
+  padding: 0 20px;
+  border-left: 1px solid #00395f1a;
+}
+
+.hero_section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.hero_section .max_width {
+  width: 100%;
+}
+
+.hero_section .heading_container {
+  margin-bottom: 60px;
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero_section .heading_container h1 {
+  margin-bottom: 30px;
+}
+
+.hero_section .big_search_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-shadow: 0 0 20px 10px rgba(102, 102, 102, 0.075);
+          box-shadow: 0 0 20px 10px rgba(102, 102, 102, 0.075);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero_section .big_search_bar input {
+  background: #e9eef3;
+  padding: 15px 20px;
+  margin-right: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  caret-color: #1a6df6;
+  border-radius: 5px;
+}
+
+.hero_section .big_search_bar button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.blog_section .max_width {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 400px;
+      grid-template-columns: 1fr 400px;
+  grid-gap: 40px;
+}
+
+.blog_article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.blog_article.active {
+  -webkit-box-shadow: 0 0 20px 10px rgba(201, 201, 201, 0.116);
+          box-shadow: 0 0 20px 10px rgba(201, 201, 201, 0.116);
+}
+
+.blog_article .image_holder {
+  width: 130px;
+  height: 130px;
+  background: #dfdfdf;
+  border-radius: 10px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.blog_article .text_holder .title {
+  line-height: 1.6;
+  font-weight: 900;
+}
+
+.article_header {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.article_header .tag {
+  background: orange;
+  color: #fff;
+  padding: 5px 6px;
+  font-size: 90%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 3px;
+}
+
+.article_header .time {
+  font-size: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.article_header .time:before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #474747;
+  border-radius: 10px;
+  display: block;
+  margin: 0 15px;
+}
+
+.blog_article_content .image_holder {
+  height: 300px;
+  width: 100%;
+  background: #eeeeee;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.blog_article_content .article_title {
+  font-family: "ubuntu";
+  line-height: 1.7;
+  margin: 20px 0;
+}
+
+.blog_article_content .article_writer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: .4px;
+}
+
+.blog_article_content .article_writer .dp_rapper {
+  background: #e0e0e0;
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 100vh;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=app.css.map */
