@@ -1,19 +1,17 @@
 import React, { useEffect } from "react";
 import Article from "./Article/Article";
+import { usePostsContext } from "../../../../contexts/PostsContext";
 
 export default function Articles() {
-  
-  useEffect(() => {
-    
-  });
+  const {
+    posts: { posts },
+  } = usePostsContext();
 
   return (
     <div>
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
+      {posts?.map((post, index) => (
+        <Article key={index} {...post.fields} />
+      ))}
     </div>
   );
 }

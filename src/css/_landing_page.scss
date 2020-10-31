@@ -50,6 +50,15 @@
     h1 {
       margin-bottom: 30px;
     }
+    p {
+      line-height: 1.7;
+      color: #011b3386;
+      
+      strong {
+        font-weight: 900;
+        color: #1a6ef6d2;
+      }
+    }
   }
   .big_search_bar {
     display: flex;
@@ -81,8 +90,10 @@
     display: grid;
     grid-template-columns: 1fr 400px;
     grid-gap: 40px;
+    padding-bottom: 100px;
   }
 }
+
 .blog_article {
   display: flex;
   margin-bottom: 30px;
@@ -95,10 +106,12 @@
   .image_holder {
     width: 130px;
     height: 130px;
-    background: rgb(223, 223, 223);
     border-radius: 10px;
     flex-shrink: 0;
     margin-right: 20px;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgba(183, 201, 207, 0.192);
   }
   .text_holder {
     .title {
@@ -124,6 +137,7 @@
     font-size: 90%;
     display: flex;
     align-items: center;
+    text-transform: capitalize;
 
     &:before {
       content: "";
@@ -136,6 +150,7 @@
     }
   }
 }
+
 .blog_article_content {
   .image_holder {
     height: 300px;
@@ -144,15 +159,15 @@
     border-radius: 10px;
     margin-bottom: 20px;
   }
-  .article_title{ 
+  .article_title {
     font-family: "ubuntu";
     line-height: 1.7;
     margin: 20px 0;
   }
-  .article_writer{
+  .article_writer {
     display: flex;
-    align-items: center; 
-    letter-spacing: .4px;
+    align-items: center;
+    letter-spacing: 0.4px;
     .dp_rapper {
       background: rgb(224, 224, 224);
       display: block;
@@ -161,9 +176,35 @@
       border-radius: 100vh;
       margin-right: 10px;
     }
-
   }
 }
 
-
-
+.no_posts {
+  text-align: center;
+  margin-bottom: 200px;
+  margin-top: 170px;
+  .illustration_rapper {
+    img {
+      width: 200px;
+      height: 200px;
+      background: rgb(253, 253, 253);
+      border-radius: 100vh;
+      border: 1px solid rgb(240, 240, 240);
+    }
+  }
+  h5 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 140%;
+    text-transform: capitalize;
+    letter-spacing: -0.5px;
+  }
+  p {
+    opacity: 0.5;
+    max-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+  }
+}
