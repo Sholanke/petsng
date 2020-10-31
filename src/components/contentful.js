@@ -1,4 +1,3 @@
-import React from "react";
 import * as Contentful from "contentful";
 import { API_SPACE_ID, API_TOKEN } from "../env";
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Article from "./Article/Article";
 import { usePostsContext } from "../../../../contexts/PostsContext";
 
