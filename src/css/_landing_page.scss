@@ -53,7 +53,7 @@
     p {
       line-height: 1.7;
       color: #011b3386;
-      
+
       strong {
         font-weight: 900;
         color: #1a6ef6d2;
@@ -159,15 +159,45 @@
     border-radius: 10px;
     margin-bottom: 20px;
   }
-  .article_title {
+  .article_title, .article_desc {
     font-family: "ubuntu";
     line-height: 1.7;
-    margin: 20px 0;
+    font-size: 140%;
+    margin-top: 30px;
+  }
+  .article_write_container {
+    margin-bottom: 40px;
+    >.title {
+      opacity: .5;
+      font-weight: 900;
+    }
+    >.rapper{
+      margin-left: 20px;
+      padding-left: 20px;
+      border-left: 2px solid #1a6df6;
+    }
+    
+  }
+  .article_desc {
+    font-size: 100%;
+    opacity: .8;
+    margin-top: 13px;
+    margin-bottom: 30px;
+
+  }
+  .article_writer_desc {
+    line-height: 1.8;
+    margin-top: 15px;
+    font-style: italic;
+    opacity: .8;
+    max-width: 500px;
   }
   .article_writer {
     display: flex;
     align-items: center;
     letter-spacing: 0.4px;
+    margin-top: 20px;
+    font-weight: 900;
     .dp_rapper {
       background: rgb(224, 224, 224);
       display: block;
@@ -175,6 +205,8 @@
       width: 40px;
       border-radius: 100vh;
       margin-right: 10px;
+      background-size: cover;
+      background-position: center;
     }
   }
 }

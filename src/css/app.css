@@ -253,10 +253,41 @@ h1 {
   margin-bottom: 20px;
 }
 
-.blog_article_content .article_title {
+.blog_article_content .article_title, .blog_article_content .article_desc {
   font-family: "ubuntu";
   line-height: 1.7;
-  margin: 20px 0;
+  font-size: 140%;
+  margin-top: 30px;
+}
+
+.blog_article_content .article_write_container {
+  margin-bottom: 40px;
+}
+
+.blog_article_content .article_write_container > .title {
+  opacity: .5;
+  font-weight: 900;
+}
+
+.blog_article_content .article_write_container > .rapper {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 2px solid #1a6df6;
+}
+
+.blog_article_content .article_desc {
+  font-size: 100%;
+  opacity: .8;
+  margin-top: 13px;
+  margin-bottom: 30px;
+}
+
+.blog_article_content .article_writer_desc {
+  line-height: 1.8;
+  margin-top: 15px;
+  font-style: italic;
+  opacity: .8;
+  max-width: 500px;
 }
 
 .blog_article_content .article_writer {
@@ -267,6 +298,8 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 0.4px;
+  margin-top: 20px;
+  font-weight: 900;
 }
 
 .blog_article_content .article_writer .dp_rapper {
@@ -276,6 +309,8 @@ h1 {
   width: 40px;
   border-radius: 100vh;
   margin-right: 10px;
+  background-size: cover;
+  background-position: center;
 }
 
 .no_posts {
