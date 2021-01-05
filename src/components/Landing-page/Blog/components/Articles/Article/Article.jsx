@@ -27,7 +27,7 @@ export default function Article({
           </p>
         </div>
         <p className="title">{title}</p>
-        <p className="title">{description}</p>
+        <p className="desc">{description}</p>
       </div>
     </NavLink>
   );

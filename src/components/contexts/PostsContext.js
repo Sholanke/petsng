@@ -1,28 +1,33 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useEffect, useReducer } from "react";
 import { getContentfulEntries } from "../contentful";
+import { postDispatchTypes, postsReducer } from "./PostsReducer";
 
 const PostsContext = createContext();
 
 export default function PostsContextProvider({ children }) {
-  const [posts, setPosts] = useState([]);
+  const [posts, dispatch] = useReducer(postsReducer, {
+    searchValue: "",
+    posts: [],
+    filteredPosts: [],
+  });
 
   useEffect(() => {
     //make api call for posts
     getContentfulEntries({
       content_type: "blogPosts",
     }).then((response) => {
-      setPosts(response.items);
+      dispatch({
+        type: postDispatchTypes.getPosts,
+        payload: response.items,
+      });
     });
-    
   }, []);
 
   return (
     <PostsContext.Provider
       value={{
-        posts: {
-          posts,
-          setPosts,
-        },
+        posts,
+        dispatch,
       }}
     >
       {children}

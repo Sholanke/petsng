@@ -4,12 +4,12 @@ import { usePostsContext } from "../../../../contexts/PostsContext";
 
 export default function Articles() {
   const {
-    posts: { posts },
+    posts: { posts, searchValue, filteredPosts },
   } = usePostsContext();
 
   return (
-    <div>
-      {posts?.map((post, index) => (
+    <div className="articles">
+      {(searchValue ? filteredPosts : posts)?.map((post, index) => (
         <Article key={index} {...post.fields} />
       ))}
     </div>

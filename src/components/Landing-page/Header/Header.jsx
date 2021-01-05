@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../common/Button/Button";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -9,9 +10,9 @@ export default function Header() {
           <div className="_left">
             <p className="logo">PetsNg</p>
             <div className="links">
-              <a href="/" className="link">
+              <NavLink to="/" className="link">
                 Blog
-              </a>
+              </NavLink>
             </div>
           </div>
 

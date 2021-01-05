@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../../common/Button/Button";
 import { usePostsContext } from "../../contexts/PostsContext";
-
+import sendIcon from "../../common/assets/svg/send.svg";
+import { postDispatchTypes } from "../../contexts/PostsReducer";
 export default function Hero() {
   const {
-    posts: { posts },
+    posts: { posts, searchValue, filteredPosts },
+    dispatch,
   } = usePostsContext();
 
-  const [searchValue, setSearchValue] = useState();
+  const handleSearch = ({ currentTarget: { value } }) =>
+    dispatch({
+      type: postDispatchTypes.search,
+      payload: value,
+    });
 
   return (
     posts?.length > 0 && (
@@ -27,13 +33,22 @@ export default function Hero() {
               type="text"
               placeholder="Search..."
               value={searchValue}
-              onChange={({ currentTarget: { value: searchValue } }) =>
-                setSearchValue(searchValue)
-              }
+              onChange={handleSearch}
               spellCheck={false}
             />
-            <Button>Search</Button>
+            <Button>
+              <span className="button_text">Search</span>
+              <div className="mbl_i">
+                <img src={sendIcon} alt="send icon" srcSet="" />
+              </div>
+            </Button>
           </div>
+
+          {!!searchValue && (
+            <p className="__results">
+              Found {filteredPosts.length} results for "{searchValue}"
+            </p>
+          )}
         </div>
       </div>
     )

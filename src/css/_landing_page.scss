@@ -1,4 +1,5 @@
 .wrapper {
+  padding: 0 20px;
   .max_width {
     max-width: 1170px;
     margin-right: auto;
@@ -41,7 +42,6 @@
   .max_width {
     width: 100%;
   }
-
   .heading_container {
     margin-bottom: 60px;
     max-width: 500px;
@@ -69,6 +69,18 @@
     box-shadow: 0 0 20px 10px rgba(102, 102, 102, 0.075);
     padding: 20px;
     border-radius: 10px;
+
+    @include mobile {
+      padding: 5px;
+      position: relative;
+      align-items: center;
+      &,
+      input,
+      button {
+        border-radius: 100vh !important;
+      }
+    }
+
     input {
       background: #e9eef3;
       padding: 15px 20px;
@@ -76,21 +88,66 @@
       flex: 1;
       caret-color: #1a6df6;
       border-radius: 5px;
+
+      @include mobile {
+        margin-right: 0;
+      }
     }
+
     button {
       flex-shrink: 0;
       padding-right: 24px;
       padding-left: 24px;
+      @include mobile {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        display: none;
+        @include mobile {
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+      .button_text {
+        color: inherit;
+        @include mobile {
+          display: none;
+        }
+      }
     }
+  }
+  .__results {
+    margin-top: 20px;
+    font-size: 15px;
+    background: #fff;
+    padding: 4px 10px;
+    font-weight: 900;
   }
 }
 
 .blog_section {
+  margin-top: 40px;
+
   .max_width {
     display: grid;
     grid-template-columns: 1fr 400px;
     grid-gap: 40px;
     padding-bottom: 100px;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  .__article_col__heading {
+    margin-bottom: 20px;
+    font-weight: 900;
   }
 }
 
@@ -99,9 +156,12 @@
   margin-bottom: 30px;
   padding: 10px;
   border-radius: 10px;
+  @include mobile {
+    flex-direction: column;
+  }
 
   &.active {
-    box-shadow: 0 0 20px 10px rgba(201, 201, 201, 0.116);
+    box-shadow: 0 0 20px 10px rgba(201, 201, 201, 0.295);
   }
   .image_holder {
     width: 130px;
@@ -109,14 +169,23 @@
     border-radius: 10px;
     flex-shrink: 0;
     margin-right: 20px;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     border: 1px solid rgba(183, 201, 207, 0.192);
+    @include mobile {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   .text_holder {
     .title {
       line-height: 1.6;
       font-weight: 900;
+    }
+    .desc {
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.7;
     }
   }
 }
@@ -152,14 +221,19 @@
 }
 
 .blog_article_content {
+  @include mobile {
+    margin-bottom: 100px;
+  }
   .image_holder {
     height: 300px;
     width: 100%;
     background: rgb(238, 238, 238);
     border-radius: 10px;
     margin-bottom: 20px;
+    background-size: cover;
   }
-  .article_title, .article_desc {
+  .article_title,
+  .article_desc {
     font-family: "ubuntu";
     line-height: 1.7;
     font-size: 140%;
@@ -167,29 +241,27 @@
   }
   .article_write_container {
     margin-bottom: 40px;
-    >.title {
-      opacity: .5;
+    > .title {
+      opacity: 0.5;
       font-weight: 900;
     }
-    >.rapper{
+    > .rapper {
       margin-left: 20px;
       padding-left: 20px;
       border-left: 2px solid #1a6df6;
     }
-    
   }
   .article_desc {
     font-size: 100%;
-    opacity: .8;
+    opacity: 0.8;
     margin-top: 13px;
     margin-bottom: 30px;
-
   }
   .article_writer_desc {
     line-height: 1.8;
     margin-top: 15px;
     font-style: italic;
-    opacity: .8;
+    opacity: 0.8;
     max-width: 500px;
   }
   .article_writer {
@@ -214,7 +286,7 @@
 .no_posts {
   text-align: center;
   margin-bottom: 200px;
-  margin-top: 170px;
+  margin-top: 50px;
   .illustration_rapper {
     img {
       width: 200px;
@@ -238,5 +310,74 @@
     margin-right: auto;
     margin-left: auto;
     line-height: 1.7;
+  }
+}
+
+.articles_grid_container {
+  > .__title {
+    margin-bottom: 40px;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    .blog_article {
+      flex-direction: column;
+      padding: 15px 15px 20px 15px;
+      .image_holder {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 20px;
+      }
+      .text_holder {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+//app footer
+.app_footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #e9eef34f;
+  margin-top: 100px;
+
+  .flex {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+    .logo {
+      font-weight: 900;
+      font-size: 20px;
+    }
+    .__links {
+      display: flex;
+      align-items: center;
+      a {
+        margin: 0 10px;
+        &:hover {
+          svg {
+            path {
+              fill: #1a6df6 !important;
+            }
+          }
+        }
+        svg {
+          $size: 25px;
+          height: $size;
+          width: $size;
+          path {
+            fill: #011b3394;
+          }
+        }
+      }
+    }
   }
 }

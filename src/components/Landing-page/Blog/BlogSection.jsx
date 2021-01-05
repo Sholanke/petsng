@@ -17,6 +17,7 @@ export default function BlogSection() {
               <ArticleContent />
             </div>
             <div>
+              <h3 className="__article_col__heading">Related articles</h3>
               <Articles />
             </div>
           </div>
