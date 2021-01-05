@@ -4,7 +4,7 @@ import { usePostsContext } from "../../../../contexts/PostsContext";
 
 export default function EmptyState() {
   const {
-    posts: { posts, searchValue, filteredPosts },
+    posts: { searchValue },
   } = usePostsContext();
   return (
     <div className="wrapper">

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max_width flex">
         <p className="logo">PetsNg</p>
         <div className="__links">
-          <a href="#">
+          <a href="/">
             <svg
               width="24"
               height="24"
@@ -22,7 +22,7 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a href="#">
+          <a href="/">
             <svg
               width="24"
               height="24"
@@ -38,7 +38,7 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a href="#">
+          <a href="/">
             <svg
               width="24"
               height="24"
@@ -54,7 +54,7 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a href="#">
+          <a href="/">
             <svg
               width="24"
               height="24"
