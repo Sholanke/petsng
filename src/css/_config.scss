@@ -13,6 +13,10 @@
   object-fit: cover;
   border: none;
   outline: none;
+  &::selection {
+    background: #0a2d4e;
+    color: #fff;
+  }
 }
 
 h1 {
@@ -39,5 +43,3 @@ h1 {
   align-items: center;
   border-radius: 5px;
 }
-
-

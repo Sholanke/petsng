@@ -158,6 +158,7 @@
   border-radius: 10px;
   @include mobile {
     flex-direction: column;
+    padding: 10px 10px 20px 10px;
   }
 
   &.active {
@@ -172,6 +173,7 @@
     background-position: top;
     background-size: cover;
     border: 1px solid rgba(183, 201, 207, 0.192);
+    
     @include mobile {
       width: 100%;
       margin-bottom: 20px;
@@ -231,6 +233,7 @@
     border-radius: 10px;
     margin-bottom: 20px;
     background-size: cover;
+    background-position-x: center;
   }
   .article_title,
   .article_desc {
@@ -352,6 +355,14 @@
     align-items: center;
     justify-content: space-between;
     display: flex;
+
+    @include mobile{
+      flex-direction: column;
+      .logo{
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+    }
 
     .logo {
       font-weight: 900;
